@@ -12,9 +12,11 @@ import pyfiglet
 from rich.console import Console
 from rich.markdown import Markdown
 
-from config import SERVER_URL, LLM_PREFIX, HISTORY_FILE, CONFIG_DIR, PROMPT_MARKER
-from command_processor import CommandProcessor
-from llm_interface import LLMInterface
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from client.config import SERVER_URL, LLM_PREFIX, HISTORY_FILE, CONFIG_DIR, PROMPT_MARKER
+from client.command_processor import CommandProcessor
+from client.llm_interface import LLMInterface
 
 # Create config directory if it doesn't exist
 if not os.path.exists(CONFIG_DIR):

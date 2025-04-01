@@ -6,6 +6,9 @@ import time
 import signal
 import argparse
 
+# Add the current directory to Python path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description="Run MCP Terminal Assistant")
@@ -16,7 +19,7 @@ def parse_args():
 def run_server():
     """Run the MCP server process."""
     server_process = subprocess.Popen(
-        [sys.executable, "server/mcp_server.py"],
+        [sys.executable, os.path.join(os.path.dirname(__file__), "server", "mcp_server.py")],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True
@@ -27,7 +30,7 @@ def run_server():
 def run_client():
     """Run the MCP client process."""
     client_process = subprocess.Popen(
-        [sys.executable, "client/mcp_client.py"]
+        [sys.executable, os.path.join(os.path.dirname(__file__), "client", "mcp_client.py")]
     )
     return client_process
 
