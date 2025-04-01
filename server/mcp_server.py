@@ -6,12 +6,12 @@ import json
 import time
 from pathlib import Path
 
-from .database import (
+from server.database import (
     init_db, log_command, get_similar_commands, 
     search_code, update_project_history, get_recent_projects
 )
-from .code_indexer import indexer
-from .config import SERVER_HOST, SERVER_PORT
+from server.code_indexer import indexer
+from server.config import SERVER_HOST, SERVER_PORT
 
 # Initialize Flask app
 app = Flask(__name__)
