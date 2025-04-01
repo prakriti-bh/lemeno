@@ -1,0 +1,11 @@
+flask==2.3.3
+flask-cors==4.0.0
+aider-chat==0.18.0
+requests==2.31.0
+python-dotenv==1.0.0
+prompt_toolkit==3.0.39
+pyperclip==1.8.2
+rich==13.5.2
+tree-sitter==0.20.1
+tree-sitter-languages==1.5.0
+pyfiglet==0.8.post1
