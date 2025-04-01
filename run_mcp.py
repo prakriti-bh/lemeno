@@ -16,7 +16,7 @@ def parse_args():
 def run_server():
     """Run the MCP server process."""
     server_process = subprocess.Popen(
-        [sys.executable, "-m", "server.mcp_server"],
+        [sys.executable, "server/mcp_server.py"],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True
@@ -27,7 +27,7 @@ def run_server():
 def run_client():
     """Run the MCP client process."""
     client_process = subprocess.Popen(
-        [sys.executable, "-m", "client.mcp_client"]
+        [sys.executable, "client/mcp_client.py"]
     )
     return client_process
 
